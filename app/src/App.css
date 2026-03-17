@@ -30,7 +30,6 @@ html, body {
   flex-direction: column;
 }
 
-/* --- your existing CSS below this line --- */
 
 .counter {
   font-size: 16px;

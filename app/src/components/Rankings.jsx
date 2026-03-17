@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import '../style/components/Rankings.css'
 
 function Rankings() {
   const [teams, setTeams] = useState([])
@@ -34,14 +35,14 @@ function Rankings() {
   if (error) return <p>Error: {error}</p>
 
   return (
-    <main>
+    <div className="rankings">
       {teams.map(team => (
-        <div key={team.id}>
+        <div key={team.id} className="team-row">
           <img src={team.crest} alt={team.name} width={40} />
           <span>{team.name}</span>
         </div>
       ))}
-    </main>
+    </div>
   )
 }
 
